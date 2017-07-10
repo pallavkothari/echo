@@ -1,1 +1,1 @@
-web: ./start-oauth2-proxy.sh && mvn spring-boot:run
+web: ./start-oauth2-proxy.sh && target/bin/start
