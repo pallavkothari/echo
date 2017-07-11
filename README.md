@@ -15,7 +15,7 @@ go get github.com/pallavkothari/oauth2_proxy
 echo "PORT=4180" >> .env
 echo "OAUTH2_PROXY_CLIENT_ID=..." >> .env
 echo "OAUTH2_PROXY_CLIENT_SECRET=..." >> .env
-echo "OAUTH2_PROXY_COOKIE_SECRET=..." >> .env
+echo "OAUTH2_PROXY_COOKIE_SECRET=..." >> .env        ### e.g. secretsecretcookie0
 echo "PROVIDER=..." >> .env     ######## e.g. facebook, github, etc. 
 echo "APP=..." >> .env             ######## e.g. https://peaceful-river-83867.herokuapp.com
 echo "COOKIE_DOMAIN=..." >> .env    ##### e.g. localhost, app.herokuapp.com, etc. 
