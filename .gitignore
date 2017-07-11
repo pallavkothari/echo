@@ -2,3 +2,5 @@
 .idea/
 *.iml
 target/
+.env*
+start-oauth2-proxy.sh
