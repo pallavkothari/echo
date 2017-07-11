@@ -23,7 +23,7 @@ echo "OAUTH2_PROXY_SIGNATURE_KEY=sha1:supersecret" >> .env # change me
 
 
 # start it up locally as it would on heroku
-
+source .env
 echo "oauth2_proxy  --http-address=http://:$PORT --cookie-secure=false --cookie-domain=${COOKIE_DOMAIN} --provider="${PROVIDER}" --email-domain="*" --redirect-url=${APP}/oauth2/callback --set-xauthrequest=true --pass-access-token=true --upstream=http://127.0.0.1:8080" > start-oauth2-proxy.sh
 
 chmod +x start-oauth2-proxy.sh
