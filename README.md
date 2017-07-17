@@ -12,14 +12,21 @@ go get github.com/pallavkothari/oauth2_proxy
 # NOTE : replace placeholder values below with real values!
 
 # set up local env 
-echo "PORT=4180" >> .env
-echo "OAUTH2_PROXY_CLIENT_ID=..." >> .env
-echo "OAUTH2_PROXY_CLIENT_SECRET=..." >> .env
-echo "OAUTH2_PROXY_COOKIE_SECRET=..." >> .env        ### e.g. secretsecretcookie0
-echo "PROVIDER=..." >> .env     ######## e.g. facebook, github, etc. 
-echo "APP=..." >> .env             ######## e.g. https://peaceful-river-83867.herokuapp.com
-echo "COOKIE_DOMAIN=..." >> .env    ##### e.g. localhost, app.herokuapp.com, etc. 
-echo "OAUTH2_PROXY_SIGNATURE_KEY=sha1:supersecret" >> .env # change me
+  # Hints:
+  # provider : facebook, github, etc
+  # app : https://peaceful-river-83867.herokuapp.com
+  # cookie domain: peaceful-river-83867.herokuapp.com
+
+cat <<EOF > .env
+PORT=4180
+OAUTH2_PROXY_CLIENT_ID=...
+OAUTH2_PROXY_CLIENT_SECRET=...
+OAUTH2_PROXY_COOKIE_SECRET=...
+PROVIDER=...
+APP=...
+COOKIE_DOMAIN=...
+OAUTH2_PROXY_SIGNATURE_KEY=sha1:supersecret
+EOF
 
 
 # start it up locally as it would on heroku
